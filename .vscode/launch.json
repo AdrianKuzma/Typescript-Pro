@@ -12,8 +12,11 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\HelloWorld.ts",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
             "outFiles": [
-                "${workspaceFolder}/**/*.js"
+                "${workspaceFolder}/out/**/*.js"
             ]
         }
     ]
