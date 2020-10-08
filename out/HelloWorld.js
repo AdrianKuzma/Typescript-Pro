@@ -1,7 +1,10 @@
-function totalD(TowerH, HeighS, lengthS) {
-    var a = (TowerH / HeighS) * (HeighS + lengthS);
+console.log(totalD(100,0.2,0.4))
+console.log(3,4,3))
+function totalD(TowerH, HeighS, LengthS) {
+    var a = (TowerH / HeighS) * (HeighS + LengthS);
     return a;
 }
+//Ukradol som marekovi 
 function Values(FirstN, SecondN, ThirdN) {
     if (FirstN == SecondN || FirstN == ThirdN) {
         if (SecondN == ThirdN)
@@ -14,6 +17,5 @@ function Values(FirstN, SecondN, ThirdN) {
     else
         return 0;
 }
-console.log(totalD(0.2, 0.4, 100));
-console.log(Values(3, 4, 3));
+
 //# sourceMappingURL=HelloWorld.js.map
