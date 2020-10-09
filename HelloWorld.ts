@@ -12,23 +12,20 @@ function totalD (TowerH:number,HeighS:number,lengthS:number){
     const a:number = (TowerH /HeighS) * (HeighS + lengthS)
     return a
 }
-function Values(FirstN:number,SecondN:number,ThirdN:number){
-    if (FirstN == SecondN || FirstN == ThirdN){
-        if(SecondN == ThirdN)
-            return 3
-        else 
-            return 2
-    }
-    if (SecondN == ThirdN)
+function Values(fn:number,sn:number,tn:number){
+    if(fn == sn && fn == tn)
         return 2
+    else if (sn == tn)
+        return 3
     else 
-        return 0
-}
+    if(sn == tn)
+        return 2
+}      
 function Slices(ts:number,p:number,se:number){
     const x = p * se
     if (x <= ts)
         return true;
-    else 
+    else
         return false;
 }
 function Length(Array: number[]){
@@ -48,7 +45,7 @@ function checkPalindrom (str:string) {
     str == str.split('').reverse().join('')
     if(str1 == str)
         return true
-    else 
+    else
         return false
 }
 function rps(p1:string,p2:string){
@@ -62,7 +59,6 @@ function rps(p1:string,p2:string){
         return "p1 wins"
     else return "p2 wins"
 }
-
 function differenceMinMax(Arr: number[]) {
     let max: number = Arr[0]
     let min: number= Arr[0]

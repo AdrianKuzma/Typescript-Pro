@@ -4,7 +4,11 @@ console.log(Triangle(2, 3, 4));
 console.log(Length([1, 2, 3, 4]));
 console.log(Slices(11, 5, 2));
 console.log(checkPalindrom("mom"));
+console.log(rps("paper", "rock"));
 console.log(differenceMinMax([10, 4, 1, 4, -10, -50, 32, 21]));
+console.log(waron([2, 8, 7, 5]));
+console.log(semss("abc", "bc"));
+console.log(Rook("F5", "C8"));
 function totalD(TowerH, HeighS, lengthS) {
     var a = (TowerH / HeighS) * (HeighS + lengthS);
     return a;
@@ -48,6 +52,18 @@ function checkPalindrom(str) {
     else
         return false;
 }
+function rps(p1, p2) {
+    if (p1 == p2)
+        return "TIE";
+    else if (p1 == "rock" && p2 == "scissors")
+        return "p1 wins";
+    else if (p1 == "paper" && p2 == "rock")
+        return "p1 wins";
+    else if (p1 == "scissors" && p2 == "paper")
+        return "p1 wins";
+    else
+        return "p2 wins";
+}
 function differenceMinMax(Arr) {
     var max = Arr[0];
     var min = Arr[0];
@@ -58,5 +74,36 @@ function differenceMinMax(Arr) {
             min = Arr[i];
     }
     return max - min;
+}
+function waron(arr) {
+    var e = 0, o = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (i % 2 == 0)
+            e = i + e;
+        else
+            o = i + o;
+    }
+    if (e < o)
+        return o - e;
+    else
+        return e - o;
+}
+function semss(r1, r2) {
+    for (var i = 0; i < r1.length; i++) {
+        for (var j = 0; j < r2.length; j++) {
+            if (r1[i] == r2[i])
+                return true;
+        }
+    }
+}
+function Rook(r1, r2) {
+    for (var i = 0; i < r1.length; i++) {
+        for (var j = 0; j < r2.length; j++) {
+            if (r1[i] == r2[i])
+                return true;
+            else
+                return false;
+        }
+    }
 }
 //# sourceMappingURL=HelloWorld.js.map
