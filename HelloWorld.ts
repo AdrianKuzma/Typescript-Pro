@@ -7,6 +7,7 @@ console.log(checkPalindrom("mom"))
 console.log(rps("paper","rock"))
 console.log(differenceMinMax([10, 4, 1, 4, -10, -50, 32, 21]))
 console.log(waron([2, 8, 7, 5]))
+console.log(endw("feminine", "nine"))
 console.log(rook("F5","C8"))
 
 function totalD (towerH:number,heighS:number,lengthS:number):number{
@@ -92,6 +93,15 @@ function waron(arr: number[]):number{
         return o - e
     else 
         return e - o
+}
+function endw(word:string,end:string):boolean{
+    let a:number = word.length
+    let b:number = end.length 
+    let c:number = a - b
+    if(word.substr(c) == end)
+        return true
+    else
+        return false
 }
 
 function rook(r1:String,r2:string):boolean{
