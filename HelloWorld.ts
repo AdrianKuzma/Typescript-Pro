@@ -8,7 +8,7 @@ console.log(rps("paper","rock"))
 console.log(differenceMinMax([10, 4, 1, 4, -10, -50, 32, 21]))
 console.log(waron([2, 8, 7, 5]))
 console.log(endw("feminine", "nine"))
-console.log(rook("F5","C8"))
+console.log(rook("F5","B5"))
 
 function totalD (towerH:number,heighS:number,lengthS:number):number{
     const a:number = (towerH /heighS) * (heighS + lengthS)
@@ -106,13 +106,8 @@ function endw(word:string,end:string):boolean{
 
 function rook(r1:String,r2:string):boolean{
     for(var i = 0; i < r1.length; i++){
-        for(var j = 0; j < r2.length; j++){
             if(r1[i] == r2[i])
-                return true
-            else 
-                return false
-        }
-
+                return true     
     }
-
+    return false
 }
